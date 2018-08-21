@@ -6,7 +6,7 @@ import java.util.Iterator;
  * @author benjaminChan
  * @date 2018/8/16 0016 下午 3:25
  */
-public interface List<E> extends Collection<E>{
+public interface List<E> extends Collection<E> {
 
     int size();
 

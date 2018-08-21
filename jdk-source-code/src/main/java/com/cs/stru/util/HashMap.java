@@ -1,24 +1,22 @@
 package com.cs.stru.util;
 
-import java.util.LinkedHashMap;
-
 /**
  * @author benjaminChan
  * @date 2018/8/17 0017 上午 10:53
- *
- *  在JDK1.8之前，HashMap采用数组+链表实现，即使用链表处理冲突，同一hash值的节点都存储在一个链表里。
- *  但是当位于一个桶中的元素较多，即hash值相等的元素较多时，通过key值依次查找的效率较低。
- *  而JDK1.8中，HashMap采用数组+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树。
- *
- *  HashMap的实现了。首先有一个每个元素都是链表（可能表述不准确）的数组，当添加一个元素（key-value）时，
- *  就首先计算元素key的hash值，以此确定插入数组中的位置，但是可能存在同一hash值的元素已经被放在数组
- *  同一位置了，这时就添加到同一hash值的元素的后面，他们在数组的同一位置，但是形成了链表，
- *  所以说数组存放的是链表。而当链表长度太长时，链表就转换为红黑树。
- *
- *  HashMap的优化提升了查找的效率
- *
- *  TODO
- *  Map接口还是有点难写的
+ * <p>
+ * 在JDK1.8之前，HashMap采用数组+链表实现，即使用链表处理冲突，同一hash值的节点都存储在一个链表里。
+ * 但是当位于一个桶中的元素较多，即hash值相等的元素较多时，通过key值依次查找的效率较低。
+ * 而JDK1.8中，HashMap采用数组+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树。
+ * <p>
+ * HashMap的实现了。首先有一个每个元素都是链表（可能表述不准确）的数组，当添加一个元素（key-value）时，
+ * 就首先计算元素key的hash值，以此确定插入数组中的位置，但是可能存在同一hash值的元素已经被放在数组
+ * 同一位置了，这时就添加到同一hash值的元素的后面，他们在数组的同一位置，但是形成了链表，
+ * 所以说数组存放的是链表。而当链表长度太长时，链表就转换为红黑树。
+ * <p>
+ * HashMap的优化提升了查找的效率
+ * <p>
+ * TODO
+ * Map接口还是有点难写的
  */
 public class HashMap<K, V> implements Map<K, V> {
 
@@ -30,7 +28,7 @@ public class HashMap<K, V> implements Map<K, V> {
 
     transient int modCount;
 
-    transient Node<K,V> [] table;
+    transient Node<K, V>[] table;
 
     private static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
@@ -64,6 +62,7 @@ public class HashMap<K, V> implements Map<K, V> {
 
     /**
      * 大于等于initialCapacity的最小的2的幂
+     *
      * @param cap
      * @return
      */
@@ -99,17 +98,20 @@ public class HashMap<K, V> implements Map<K, V> {
 
     @Override
     public V put(K k, V v) {
-        return putVal(hash(k),k,v,false,true);
+        return putVal(hash(k), k, v, false, true);
     }
 
     private V putVal(int hash, K k, V v, boolean onlyIfAbsent, boolean evict) {
-        Node<K,V>[] tab;Node<K,V> p;int n,i;
+        Node<K, V>[] tab;
+        Node<K, V> p;
+        int n, i;
 
         return null;
     }
 
     /**
      * hash算法
+     *
      * @param key
      * @return
      */
@@ -147,7 +149,7 @@ public class HashMap<K, V> implements Map<K, V> {
         final int hash;
         final K k;
         V v;
-        Node<K,V> next;
+        Node<K, V> next;
 
         public Node(int hash, K k, V v, Node<K, V> next) {
             this.hash = hash;
