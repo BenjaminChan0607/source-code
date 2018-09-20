@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="testA" class="com.cs.stru.test.TestA">
+        <constructor-arg index="0" ref="testB"></constructor-arg>
+    </bean>
+    <bean id="testB" class="com.cs.stru.test.TestB">
+        <constructor-arg index="0" ref="testC"></constructor-arg>
+    </bean>
+    <bean id="testC" class="com.cs.stru.test.TestC">
+        <constructor-arg index="0" ref="testA"></constructor-arg>
+    </bean>
+</beans>

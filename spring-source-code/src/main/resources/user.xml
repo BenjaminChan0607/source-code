@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:myname="http://localhost/schema/user"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://localhost/schema/user http://localhost/schema/user.xsd">
+
+    <myname:user id="testBean" userName="tom" email="abc@qq.com"></myname:user>
+
+</beans>
