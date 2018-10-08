@@ -19,8 +19,8 @@ public class SpringTest {
     @Test
     public void test() {
         BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("bean.xml"));
-        MyBean myBean = (MyBean) beanFactory.getBean("myBean");
-        System.out.println(myBean.getStr());
+        Hello hello = (Hello) beanFactory.getBean("hello");
+        System.out.println(hello.getStr());
     }
 
     @Test
