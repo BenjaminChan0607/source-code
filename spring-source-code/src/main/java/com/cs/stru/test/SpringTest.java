@@ -13,6 +13,8 @@ import org.springframework.core.io.ClassPathResource;
  * <p>
  * BeanFactory
  * ApplicationContext
+ *
+ * BeanFactory/ApplicationContext
  */
 public class SpringTest {
 
